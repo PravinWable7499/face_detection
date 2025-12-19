@@ -1,0 +1,13 @@
+# Web Framework
+fastapi==0.115.0
+uvicorn==0.30.6
+
+# CORS Support
+python-multipart==0.0.9
+
+# Computer Vision & Face Recognition
+opencv-python==4.10.0.84
+deepface==0.0.79
+
+# Deep Learning Backend (required by DeepFace)
+tf-keras==2.16.0
