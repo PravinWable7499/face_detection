@@ -1,0 +1,177 @@
+/* Reset and base styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Body with gradient background */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Main container */
+.container {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  padding: 30px;
+  width: 100%;
+  max-width: 500px;
+  text-align: center;
+}
+
+/* Page title */
+h1 {
+  color: #2c3e50;
+  margin-bottom: 25px;
+  font-size: 28px;
+}
+
+/* Live camera feed */
+video {
+  border: 2px solid #e0e0e0;
+  border-radius: 12px;
+  background: #000;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: block;
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+}
+
+/* Real-time canvas for face detection (used in register.html / detect.html) */
+#canvas {
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  margin-top: 10px;
+  background: #000;
+  display: block;
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+}
+
+/* Name input field */
+input[type="text"] {
+  width: 100%;
+  padding: 12px 16px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  margin-bottom: 20px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+input[type="text"]:focus {
+  border-color: #3498db;
+}
+
+/* Button container (for homepage) */
+.btn-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+/* General button style */
+.btn, button {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+
+/* Primary button (Register / Unlock) */
+.btn.primary, button:not(.secondary) {
+  background: #3498db;
+  color: white;
+}
+
+.btn.primary:hover, button:not(.secondary):hover {
+  background: #2980b9;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(52, 152, 219, 0.3);
+}
+
+/* Secondary button (Back) */
+.btn.secondary, .secondary {
+  background: #7f8c8d;
+  color: white;
+}
+
+.btn.secondary:hover, .secondary:hover {
+  background: #95a5a6;
+  transform: translateY(-2px);
+}
+
+/* Disabled button state */
+button:disabled {
+  background: #bdc3c7;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Result message area */
+#result {
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: 600;
+  min-height: 24px;
+  padding: 8px 0;
+  text-align: center;
+}
+
+/* Result colors */
+#result.info {
+  color: #2980b9;
+}
+
+#result.success {
+  color: #27ae60;
+}
+
+#result.warning {
+  color: #e74c3c;
+}
+
+/* Responsive design */
+@media (max-width: 500px) {
+  .container {
+    padding: 20px;
+  }
+
+  video,
+  #canvas {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  .btn, button {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+}
+
+

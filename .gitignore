@@ -1,0 +1,20 @@
+# Python virtual environment
+face_env/
+venv/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Model / image files (optional – uncomment if needed)
+# *.h5
+# *.tflite
+# *.jpg
+# *.png
+
+# Logs
+*.log
