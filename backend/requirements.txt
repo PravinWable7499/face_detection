@@ -2,14 +2,10 @@ fastapi
 uvicorn
 gunicorn
 
+numpy<2
 opencv-python-headless
-numpy
 pillow
 
 tensorflow==2.16.1
+tf-keras==2.16.0
 deepface==0.0.79
-
-mtcnn
-retina-face
-gdown
-tqdm
