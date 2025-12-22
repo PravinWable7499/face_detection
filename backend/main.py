@@ -7,8 +7,8 @@ from fastapi import FastAPI, Form, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import HTMLResponse, FileResponse
 from pathlib import Path
-from .models.schemas import RecognitionResponse, RegistrationResponse
-from .services.face_processor import register_face, recognize_face
+from models.schemas import RecognitionResponse, RegistrationResponse
+from services.face_processor import register_face, recognize_face
 import cv2
 import numpy as np
 import base64
@@ -53,6 +53,7 @@ async def script_js():
 # ✅ API Endpoints
 # In your /register and /recognize endpoints:
 
+
 @app.post("/register", response_model=RegistrationResponse)
 async def register(name: str = Form(...), frame: str = Form(...)):
     try:
@@ -69,6 +70,7 @@ async def register(name: str = Form(...), frame: str = Form(...)):
         raise HTTPException(400, "Face already registered or no face detected.")
 
     return {"message": f"Face registered for {name}"}
+
 
 @app.post("/recognize", response_model=RecognitionResponse)
 async def recognize(frame: str = Form(...)):
