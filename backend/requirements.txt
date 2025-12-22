@@ -6,8 +6,8 @@ opencv-python-headless
 numpy
 pillow
 
-deepface==0.0.79
 tensorflow==2.16.1
+deepface==0.0.79
 
 mtcnn
 retina-face
