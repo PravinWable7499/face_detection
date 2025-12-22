@@ -1,11 +1,16 @@
-fastapi
-uvicorn
-gunicorn
+fastapi==0.110.0
+uvicorn==0.29.0
+gunicorn==23.0.0
 
-numpy<2
-opencv-python-headless
-pillow
+# OpenCV (headless for servers)
+opencv-python-headless==4.9.0.80
 
-tensorflow==2.16.1
-tf-keras==2.16.0
-deepface==0.0.79
+# Image processing
+pillow==10.3.0
+numpy==1.26.4
+
+# TensorFlow (Python 3.10 compatible)
+tensorflow==2.15.1
+
+# Optional but recommended
+python-multipart==0.0.9
