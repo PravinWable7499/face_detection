@@ -3,6 +3,7 @@ import cv2
 import numpy as np
 from deepface import DeepFace
 
+
 # Use OpenCV for face detection
 FACE_CASCADE = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_default.xml')
 

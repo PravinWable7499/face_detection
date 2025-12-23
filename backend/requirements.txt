@@ -1,16 +1,24 @@
+# ===============================
+# Web framework
+# ===============================
 fastapi==0.110.0
 uvicorn==0.29.0
 gunicorn==23.0.0
+python-multipart==0.0.9
 
-# OpenCV (headless for servers)
+# ===============================
+# Core scientific stack
+# ===============================
+numpy==1.26.4
+pillow==10.3.0
+
+# ===============================
+# OpenCV (server safe)
+# ===============================
 opencv-python-headless==4.9.0.80
 
-# Image processing
-pillow==10.3.0
-numpy==1.26.4
-
-# TensorFlow (Python 3.10 compatible)
-tensorflow==2.15.1
-
-# Optional but recommended
-python-multipart==0.0.9
+# ===============================
+# Deep Learning (STABLE)
+# ===============================
+tensorflow-cpu==2.15.1
+deepface==0.0.92

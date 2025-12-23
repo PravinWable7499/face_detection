@@ -3,15 +3,28 @@ import os
 
 os.environ["TF_ENABLE_ONEDNN_OPTS"] = "0"
 
+# from fastapi import FastAPI, Form, HTTPException
+# from fastapi.middleware.cors import CORSMiddleware
+# from fastapi.responses import HTMLResponse, FileResponse
+# from pathlib import Path
+# from models.schemas import RecognitionResponse, RegistrationResponse
+# from services.face_processor import register_face, recognize_face
+# import cv2
+# import numpy as np
+# import base64
+
+
 from fastapi import FastAPI, Form, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import HTMLResponse, FileResponse
 from pathlib import Path
+
 from models.schemas import RecognitionResponse, RegistrationResponse
 from services.face_processor import register_face, recognize_face
-import cv2
+
 import numpy as np
 import base64
+
 
 app = FastAPI(title="Face Lock API")
 
@@ -94,3 +107,9 @@ async def recognize(frame: str = Form(...)):
 
     name, confidence = recognize_face(image)
     return {"name": name, "confidence": round(confidence, 2)}
+
+
+from fastapi import FastAPI
+
+app = FastAPI()
+
